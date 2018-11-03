@@ -7,35 +7,29 @@ public class FindDistinctNumbers {
 
 	public static void main(String[] args) {
 
-		List<Integer> numerList = new ArrayList<>();
+		List<Integer> numberList = new ArrayList<>();
+		numberList.add(10);
+		numberList.add(20);
+		numberList.add(30);
+		numberList.add(40);
+		numberList.add(50);
+		numberList.add(60);
+		numberList.add(70);
+		numberList.add(80);
+		numberList.add(20);
+		numberList.add(30);
 
-		numerList.add(10);
-		numerList.add(20);
-		numerList.add(30);
-		numerList.add(40);
-		numerList.add(50);
-		numerList.add(60);
-		numerList.add(70);
-		numerList.add(80);
-		numerList.add(20);
-		numerList.add(30);
-
-		List<Integer> list = getlistWithoutDuplicates(numerList);
-
-		System.out.println("Distinct List: : "+list);
+		List<Integer> list = getListWithoutDuplicates(numberList);
+		System.out.println("Distinct List: : " + list);
 	}
 
-	public static List<Integer> getlistWithoutDuplicates(List<Integer> list){
-
+	public static List<Integer> getListWithoutDuplicates(List<Integer> list) {
 		List<Integer> distinctList = new ArrayList<>();
-
-		for (Integer item: list) {
-
-			if(!distinctList.contains(item))
-			{
+		for (Integer item : list) {
+			if (!distinctList.contains(item)) {
 				distinctList.add(item);
 			}
-		}	
+		}
 
 		return distinctList;
 	}

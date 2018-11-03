@@ -1,16 +1,15 @@
-var arr=[10, 20, 30, 40, 50, 60, 70, 20, 30, 40];
+let numbers = [10, 20, 30, 40, 50, 60, 70, 20, 30, 40];
 
-var distinctArr =[];
+let distinctNumbers = [];
 
-function duplicateElement(arr){
-
-for (let i in arr)
- {
-	if(!distinctArr.includes(arr[i])) {
-		distinctArr.push(arr[i]);
-	}
- }
+let findDistinctElements = (numbers) => {
+	for (let i in numbers)
+	{
+		if(!distinctNumbers.includes(numbers[i])) {
+			distinctNumbers.push(numbers[i]);
+		}
+	 }
 }
 
-duplicateElement(arr);
-console.log("Distinct elements: "+distinctArr);
+findDistinctElements(numbers);
+console.log(`Distinct elements: ${distinctNumbers}`);
